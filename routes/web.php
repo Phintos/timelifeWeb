@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'welcome');
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
@@ -31,6 +33,9 @@ Auth::routes();
 // Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 // Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
+//Route::get('/', 'HomeController@index')->name('welcome');
+Route::get('/home', 'AdminController@admin')->middleware('is_admin')->name('admin');
 //Admin routes
-Route::get('/home', 'ChartController@index')->middleware('is_admin')->name('admin');
-Route::get('/home', 'ChartController@index')->middleware('auth');
+Route::get('/home', 'ChartController@index');
+// Route::get('/home', 'ChartController@index')->middleware('is_admin')->name('admin');
+// Route::get('/home', 'ChartController@index')->middleware('auth');
