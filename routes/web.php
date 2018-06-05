@@ -36,6 +36,6 @@ Auth::routes();
 //Route::get('/', 'HomeController@index')->name('welcome');
 Route::get('/home', 'AdminController@admin')->middleware('is_admin')->name('admin');
 //Admin routes
-Route::get('/home', 'ChartController@index');
+//Route::get('/home', 'ChartController@index')->name('home');
 // Route::get('/home', 'ChartController@index')->middleware('is_admin')->name('admin');
 // Route::get('/home', 'ChartController@index')->middleware('auth');
