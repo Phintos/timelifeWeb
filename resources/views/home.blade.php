@@ -17,14 +17,14 @@
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <!-- CSS Files -->
   <link href="{{ asset('dashboard/css/bootstrap.min.css')}}" rel="stylesheet" />
-  <link href="{{ asset('dashboard/css/now-ui-dashboard.css?v=1.1.0')}}" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="{{ asset('dashboard/demo/demo.css')}}" rel="stylesheet" />
+  <link href="{{ asset('dashboard/css/now-ui-dashboard.css')}}" rel="stylesheet" />
+  
+  
 </head>
 
 <body class="">
   <div class="wrapper ">
-    <div class="sidebar" data-color="orange">
+    <div class="sidebar" data-color="blue">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
@@ -107,17 +107,17 @@
           <div class="col-lg-4">
             <div class="card card-chart">
               <div class="card-header">
-                <h5 class="card-category">Global Sales</h5>
-                <h4 class="card-title">Male Chart</h4>
+                <h5 class="card-category">2018 Fake</h5>
+                <h4 class="card-title">Fake Chart</h4>
                 <div class="dropdown">
                   <button type="button" class="btn btn-round btn-default dropdown-toggle btn-simple btn-icon no-caret" data-toggle="dropdown">
                     <i class="now-ui-icons loader_gear"></i>
                   </button>
                   <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                    <a class="dropdown-item text-danger" href="#">Remove Data</a>
+                    <a class="dropdown-item" href="#">Questa chart è del template</a>
+                    <a class="dropdown-item" href="#">Sono dati Fake</a>
+                    <a class="dropdown-item" href="#">L'ho tenuta perchè è bella</a>
+                    
                   </div>
                 </div>
               </div>
@@ -143,10 +143,8 @@
                     <i class="now-ui-icons loader_gear"></i>
                   </button>
                   <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                    <a class="dropdown-item text-danger" href="#">Remove Data</a>
+                    <a class="dropdown-item" href="#">30</a>
+                    <a class="dropdown-item" href="#">Grazie</a>
                   </div>
                 </div>
               </div>
@@ -174,10 +172,8 @@
                     <i class="now-ui-icons loader_gear"></i>
                   </button>
                   <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                    <a class="dropdown-item text-danger" href="#">Remove Data</a>
+                    <a class="dropdown-item" href="#">Anche 18</a>
+                    <a class="dropdown-item" href="#">Va bene</a>
                   </div>
                 </div>
               <div class="card-body">
@@ -321,37 +317,6 @@
           </div>
         </div>
       </div>
-      <footer class="footer">
-        <div class="container-fluid">
-          <nav>
-            <ul>
-              <li>
-                <a href="https://www.creative-tim.com">
-                  Creative Tim
-                </a>
-              </li>
-              <li>
-                <a href="http://presentation.creative-tim.com">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="http://blog.creative-tim.com">
-                  Blog
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div class="copyright">
-            &copy;
-            <script>
-              document.write(new Date().getFullYear())
-            </script>, Designed by
-            <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
-          </div>
-        </div>
-      </footer>
     </div>
   </div>
 
@@ -368,7 +333,6 @@
   <script src="{{ asset('dashboard/js/plugins/bootstrap-notify.js')}}"></script>
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="{{ asset('dashboard/js/now-ui-dashboard.min.js?v=1.1.0')}}" type="text/javascript"></script>
-  <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
   <script src="{{ asset('dashboard/demo/demo.js')}}"></script>
   <script>
     $(document).ready(function() {

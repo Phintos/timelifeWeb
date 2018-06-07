@@ -30,7 +30,7 @@
 <body>
 
     <div class="limiter">
-        <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+        <div class="container-login100" style="background-image: url('login/images/bg-01.jpg');">
             <div class="wrap-login100">
                 <form method="POST" action="{{ route('login') }}" class="login100-form validate-form" >
                     {{ csrf_field() }}
@@ -45,7 +45,7 @@
 
 
                     <span class="login100-form-title p-b-34 p-t-27">
-                        Login
+                        Admin Login
                     </span>
 
                     <div class="wrap-input100 validate-input" data-validate = "Enter username">
