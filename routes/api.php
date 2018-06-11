@@ -31,7 +31,7 @@ Route::get('media/{id}', 'MediaController@show')->middleware('auth:api');
 
 Route::get('user/{id}', 'UserController@show')->middleware('auth:api');
 
-Route::get('calendar/{id}', 'CalendarController@show')->middleware('auth:api');
+Route::get('calendar', 'CalendarController@show')->middleware('auth:api');
 
 //create new media...
 
