@@ -21,43 +21,43 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 //list mood, comments ecc..
 
-Route::get('media', 'MediaController@index');
+Route::get('media', 'MediaController@index')->middleware('auth:api');
 
-Route::get('user', 'UserController@index');
+Route::get('user', 'UserController@index')->middleware('auth:api');
 
 //list single mood, comments ecc..
 
-Route::get('media/{id}', 'MediaController@show');
+Route::get('media/{id}', 'MediaController@show')->middleware('auth:api');
 
-Route::get('user/{id}', 'UserController@show');
+Route::get('user/{id}', 'UserController@show')->middleware('auth:api');
 
-Route::get('calendar/{id}', 'CalendarController@show');
+Route::get('calendar/{id}', 'CalendarController@show')->middleware('auth:api');
 
 //create new media...
 
-Route::post('media', 'MediaController@store');
+Route::post('media', 'MediaController@store')->middleware('auth:api');
 
-Route::post('user', 'UserController@store');
+Route::post('user', 'UserController@store')->middleware('auth:api');
 
 // update media...
-Route::put('media', 'MediaController@store');
-Route::put('user', 'UserController@store');
+Route::put('media', 'MediaController@store')->middleware('auth:api');
+Route::put('user', 'UserController@store')->middleware('auth:api');
 
 //destroy media...
-Route::delete('media/{id}', 'MediaController@destroy');
-Route::delete('user/{id}', 'UserController@destroy');
+Route::delete('media/{id}', 'MediaController@destroy')->middleware('auth:api');
+Route::delete('user/{id}', 'UserController@destroy')->middleware('auth:api');
 
 // Authentication Routes...
-Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
-Route::post('login', 'Auth\LoginController@login');
-Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login')->middleware('auth:api');
+Route::post('login', 'Auth\LoginController@login')->middleware('auth:api');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout')->middleware('auth:api');
 
 // Registration Routes...
-Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-Route::post('register', 'Auth\RegisterController@register');
+Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register')->middleware('auth:api');
+Route::post('register', 'Auth\RegisterController@register')->middleware('auth:api');
 
 // Password Reset Routes...
-Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
-Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
-Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
-Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->middleware('auth:api');
+Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->middleware('auth:api');
+Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->middleware('auth:api');
+Route::post('password/reset', 'Auth\ResetPasswordController@reset')->middleware('auth:api');

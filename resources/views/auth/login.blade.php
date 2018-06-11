@@ -35,10 +35,10 @@
                 <form method="POST" action="{{ route('login') }}" class="login100-form validate-form" >
                     {{ csrf_field() }}
                     <span class="login100-form-logo">
-                        <i class="zmdi zmdi-landscape"></i>
+                        <i class="zmdi zmdi-lock"></i>
                     </span>
 
-                   <!--  <img src="/Users/gcristini/Documents/Timelife/Logo/PNG/LogoT3.png" class="logo"> -->
+                    <!-- <img src="{{ asset('login/vendor/jquery/jquery-3.2.1.min.js')}}" class="logo"> -->
                     <!-- Recupera login -->
                     <!-- <div class="card-body">
                     <form method="POST" action="{{ route('login') }}"> -->

@@ -301,9 +301,16 @@ section.features .feature-item i {
 
 section.cta {
   position: relative;
+  background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   padding: 250px 0;
   background-image: url("../img/bg-cta.jpg");
-  background-position: center;
+  background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

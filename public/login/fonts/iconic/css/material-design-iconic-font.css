@@ -2937,6 +2937,7 @@
 }
 .zmdi-lock:before {
   content: '\f191';
+  
 }
 .zmdi-mail-reply-all:before {
   content: '\f192';
