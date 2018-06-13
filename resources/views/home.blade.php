@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -79,12 +80,15 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="now-ui-icons users_single-02"></i>
+                  {{ Auth::user()->name }}
                   <p>
                     <span class="d-lg-none d-md-block">Some Actions</span>
                   </p>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="{{ route('logout') }}"
+                
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink" >
+                 
+                 <a class="dropdown-item" href="{{ route('logout') }}"
                     onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
                     {{ __('Logout') }}
@@ -203,7 +207,7 @@
                     <tbody>
                       <div id="pop-div"></div>
                         <?= Lava::render('GeoChart', 'Popularity', 'pop-div') ?>
-                    </tbody>
+                    </tbody><
                   </table>
                 </div>
               </div>
@@ -224,6 +228,7 @@
               <div class="card-body">
                 <div class="table-responsive">
                   <table class="table">
+
                     <thead class=" text-primary">
                       <th>
                         Name
@@ -232,83 +237,22 @@
                         Country
                       </th>
                       <th>
-                        City
+                        Email
                       </th>
                       <th class="text-right">
-                        Salary
+                        Gender
                       </th>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>
-                          Dakota Rice
-                        </td>
-                        <td>
-                          Niger
-                        </td>
-                        <td>
-                          Oud-Turnhout
-                        </td>
-                        <td class="text-right">
-                          $36,738
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Minerva Hooper
-                        </td>
-                        <td>
-                          Curaçao
-                        </td>
-                        <td>
-                          Sinaai-Waas
-                        </td>
-                        <td class="text-right">
-                          $23,789
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Sage Rodriguez
-                        </td>
-                        <td>
-                          Netherlands
-                        </td>
-                        <td>
-                          Baileux
-                        </td>
-                        <td class="text-right">
-                          $56,142
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Doris Greene
-                        </td>
-                        <td>
-                          Malawi
-                        </td>
-                        <td>
-                          Feldkirchen in Kärnten
-                        </td>
-                        <td class="text-right">
-                          $63,542
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Mason Porter
-                        </td>
-                        <td>
-                          Chile
-                        </td>
-                        <td>
-                          Gloucester
-                        </td>
-                        <td class="text-right">
-                          $78,615
-                        </td>
-                      </tr>
+                    @foreach($users as $user)
+                        <tr>
+                          
+                          <td>{{ $user->name }}</td>
+                          <td>{{ $user->location }}</td>
+                          <td>{{ $user->email }}</td>
+                          <td>{{ $user->gender }}</td>
+                        </tr>
+                      @endforeach
                     </tbody>
                   </table>
                 </div>

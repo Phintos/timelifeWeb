@@ -16,6 +16,7 @@ class ChartController extends Controller
         //Country Chart
         //Richiamiamo l'user e li cicliamo, se la location non esiste avremo come valore uno. Se già esiste addizioniamo all'uno.
         $users = User::all();
+        
         $arrayLocation = array();
         foreach ($users as $user) {
             if (!array_key_exists($user->location, $arrayLocation)) {
@@ -87,12 +88,7 @@ class ChartController extends Controller
             Lava::DonutChart('IMDB', $reasons, [
                 'title' => 'Mood Chart'
             ]);
-
-
-
-
-
             
-            return view('home');
+            return view('home', $users);
     }
 }

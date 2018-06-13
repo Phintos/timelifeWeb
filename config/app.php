@@ -148,6 +148,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Khill\Lavacharts\Laravel\LavachartsServiceProvider::class,
         Lykegenes\TableView\Providers\TableViewServiceProvider::class,
+        
 
 
 

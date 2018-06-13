@@ -51,6 +51,8 @@ Route::delete('user/{id}', 'UserController@destroy')->middleware('auth:api');
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login')->middleware('auth:api');
 Route::post('login', 'Auth\LoginController@login')->middleware('auth:api');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout')->middleware('auth:api');
+Route::post('oauth/token', 'AccessTokenController@issueToken');
+
 
 // Registration Routes...
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register')->middleware('auth:api');

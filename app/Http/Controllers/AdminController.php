@@ -6,6 +6,7 @@ use Khill\Lavacharts\Laravel\LavachartsFacade as Lava;
 use App\Chart;
 use App\User;
 use App\Media;
+use Closure;
 
 class AdminController extends Controller
 {
@@ -13,12 +14,16 @@ class AdminController extends Controller
     {
         $this->middleware('auth');
     }
+
+    
+    
+
     public function admin()
     {
         
         //Country Chart
         //Richiamiamo l'user e li cicliamo, se la location non esiste avremo come valore uno. Se già esiste addizioniamo all'uno.
-        $users = User::all();
+        $users = User::orderBy('id')->take(10)->get();
         $arrayLocation = array();
         foreach ($users as $user) {
             if (!array_key_exists($user->location, $arrayLocation)) {
@@ -90,14 +95,9 @@ class AdminController extends Controller
             Lava::DonutChart('IMDB', $reasons, [
                 'title' => 'Mood Chart'
             ]);
-
-
-
-
-
   
 
-        return view('home');
+        return view('home', compact('users'));
     }
 
 }

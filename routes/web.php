@@ -13,29 +13,15 @@
 
 Route::view('/', 'welcome');
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
 
-
-//Auth routes
-// Route::get('WWizqs9NDFaNtIPgrlif', 'Auth\LoginController@showLoginForm')->name('login');
-// Route::post('login', 'Auth\LoginController@login');
-// Route::post('logout', 'Auth\LoginController@logout')->name('logout');
-// Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-// Route::post('register', 'Auth\RegisterController@register');
-// Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
-// Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
-// Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
-// Route::post('password/reset', 'Auth\ResetPasswordController@reset');
-
-//Route::get('/', 'HomeController@index')->name('welcome');
 Route::get('/home', 'AdminController@admin')->middleware('is_admin')->name('admin');
-//Admin routes
-//Route::get('/home', 'ChartController@index')->name('home');
-// Route::get('/home', 'ChartController@index')->middleware('is_admin')->name('admin');
-// Route::get('/home', 'ChartController@index')->middleware('auth');
+
+// Route::group( ['middleware' => 'auth' ], function()
+// {
+//     Route::get('/login', 'AdminController@handle');
+// });
+
+

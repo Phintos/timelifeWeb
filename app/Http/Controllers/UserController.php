@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\User;
 use App\Http\Resources\User as UserResource;
+use View;
 
 class UserController extends Controller
 {
@@ -74,7 +75,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
     }
 
     /**
@@ -87,4 +88,21 @@ class UserController extends Controller
     {
         //
     }
+
+    public function getData()
+    {
+        $user = User::all();
+        $user = $user->toArray();
+               
+
+        return View::make('home', $user);
+    }
+
+    // public function displayData(Request $request)
+    // {
+        
+
+    // }
+
+
 }
