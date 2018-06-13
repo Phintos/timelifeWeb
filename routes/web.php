@@ -12,6 +12,7 @@
 */
 
 Route::view('/', 'welcome');
+Route::view('/pop', 'pop');
 
 
 Auth::routes();

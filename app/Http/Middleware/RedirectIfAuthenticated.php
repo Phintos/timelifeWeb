@@ -19,10 +19,8 @@ class RedirectIfAuthenticated
     {
         if (Auth::guard($guard)->check() && Auth::user()->isAdmin()) {
             return redirect('/home');
-        } else {
-            return redirect('/login');
-        }
+        } 
 
-        // return $next($request);
+        return $next($request);
     }
 }

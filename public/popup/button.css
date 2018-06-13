@@ -1,0 +1,93 @@
+.close {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  box-shadow:  0 0 40px 20px rgba(0,0,0,.1);
+  width: 0.75em;
+  height: 0.75em;
+  position: absolute;
+  top:30px;
+  left:30px;
+  border: none;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  font: normal 4em/normal Arial, Helvetica, sans-serif;
+  color: #17b898;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #17b898;
+  -webkit-transform: rotateZ(471.54426539266757deg)   ;
+  transform: rotateZ(471.54426539266757deg)   ;
+
+}
+
+.close:hover {
+  background: #17b898;
+  -webkit-transition: background 350ms cubic-bezier(0.42, 0, 0.58, 1) 10ms, all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -moz-transition: background 350ms cubic-bezier(0.42, 0, 0.58, 1) 10ms, all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -o-transition: background 350ms cubic-bezier(0.42, 0, 0.58, 1) 10ms, all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  transition: background 350ms cubic-bezier(0.42, 0, 0.58, 1) 10ms, all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -webkit-transform: rotateX(-1.7188733853924696deg) rotateZ(19.48056503444799deg)   ;
+  transform: rotateX(-1.7188733853924696deg) rotateZ(19.48056503444799deg)   ;
+}
+
+
+
+.close::before {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 0.45em;
+  height: 0.1em;
+  position: absolute;
+  content: "";
+  top: 0.33em;
+  left: 0.155em;
+  border: none;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #ffffff;
+  text-shadow: none;
+  -webkit-transform: rotateZ(24.064227395494576deg)   ;
+  transform: rotateZ(24.064227395494576deg)   ;
+}
+
+.close::after {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 0.45em;
+  height: 0.1em;
+  position: absolute;
+  content: "";
+  top: 0.33em;
+  left: 0.155em;
+  border: none;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: #17b898;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #ffffff;
+  text-shadow: none;
+  -webkit-transform: rotateZ(-66.46310423517549deg)   ;
+  transform: rotateZ(-66.46310423517549deg)   ;
+}
+.text {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none;
+  font: normal 36px/1 "Cabin Condensed", Helvetica, sans-serif;
+  color: #ffffff;
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+body {
+    background-repeat: repeat-x;
+}
