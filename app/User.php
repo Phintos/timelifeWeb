@@ -29,15 +29,11 @@ class User extends Authenticatable
     ];
 
     public function media() {
-
         return $this->hasMany('App\Media');
-
     }
 
     public function calendar() {
-
         return $this->hasMany('App\Calendar');
-
     }
 
     const ADMIN_TYPE = 'admin';

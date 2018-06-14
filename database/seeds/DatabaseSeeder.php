@@ -12,8 +12,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(UsersTableSeeder::class);
-        $this->call(MediaTableSeeder::class);
         $this->call(CalendarTableSeeder::class);
-
+        $this->call(MediaTableSeeder::class);
     }
 }

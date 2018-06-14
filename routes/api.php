@@ -29,9 +29,11 @@ Route::get('user', 'UserController@index')->middleware('auth:api');
 
 Route::get('media/{id}', 'MediaController@show')->middleware('auth:api');
 
-Route::get('user/{id}', 'UserController@show')->middleware('auth:api');
+Route::get('user/{id}', 'UserController@show');
 
-Route::get('calendar', 'CalendarController@show')->middleware('auth:api');
+Route::get('calendar', 'CalendarController@show');
+
+Route::get('calendar/{user_id}', 'CalendarController@index');
 
 //create new media...
 

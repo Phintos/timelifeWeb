@@ -17,4 +17,12 @@ class CalendarController extends Controller
         //Return single media as resource
         return response()->json($calendar);
     }
+
+    public function index($user_id)
+    {
+        $calendar = Calendar::where('user_id', '=', $user_id)->get();
+
+        return response()->json($calendar);
+    }
+
 }
