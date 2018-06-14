@@ -21,16 +21,16 @@ class Media extends Model
      /**
      * Get the post that owns the comment.
      */
-    public function user()
+    public function calendar()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\Calendar');
     }
 
     // public function moods()
     // {
     //     return $this->belongsTo('App\Mood');
     // }
-    
+
     // public function comments()
     // {
     //     return $this->hasOne('App\Comment');

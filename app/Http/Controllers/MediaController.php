@@ -42,15 +42,14 @@ class MediaController extends Controller
         $media = $request->isMethod('put') ? Media::findOrFail($request->media_id) : new Media;
 
         //$media->id = $request->input('media_id');
-        $media->id_user = $request->input('id_user');
-        $media->id_calendar = $request->input('id_calendar');
+        $media->calendar_id = $request->input('calendar_id');
         $media->mood = $request->input('mood');
         $media->title = $request->input('title');
         $media->body = $request->input('body');
         $media->type = $request->input('type');
         $media->mediaUrl = $request->input('mediaUrl');
 
-        $cal = Calendar::findOrFail($media->id_calendar);
+        $cal = Calendar::findOrFail($media->calendar_id);
         $cal->mood = $cal->mood . $request->input('mood');
         $cal->save();
 
