@@ -14,7 +14,8 @@ class CalendarTableSeeder extends Seeder
     public function run()
     {
     	factory(App\Calendar::class, 30)->create();
-  
+        
+
 
     }
 }

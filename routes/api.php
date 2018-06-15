@@ -35,6 +35,8 @@ Route::get('calendar', 'CalendarController@show');
 
 Route::get('calendar/{user_id}', 'CalendarController@index');
 
+Route::get('allmedia/{calendar_id}', 'MediaController@index');
+
 //create new media...
 
 Route::post('media', 'MediaController@store')->middleware('auth:api');

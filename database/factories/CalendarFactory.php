@@ -17,5 +17,6 @@ $factory->define(App\Calendar::class, function (Faker $faker) {
     return [
         'mood' => $faker->randomElement($array = array ('good', 'bad', 'love')),
         'user_id' => App\User::all()->random()->id,
+        'calendar_date' => $faker->date($format = 'y-m-d', $max = 'now'),
     ];
 });

@@ -14,11 +14,15 @@ class MediaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($calendar_id)
     {
-        $media = Media::paginate(15);
+        $media = Media::all();
 
-        return MediaResource::collection($media);
+        //return MediaResource::collection($media);
+
+        $media = Media::where('calendar_id', '=', $calendar_id)->get();
+
+        return response()->json($media);
     }
 
     /**
