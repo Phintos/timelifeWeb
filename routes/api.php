@@ -27,7 +27,7 @@ Route::get('user', 'UserController@index')->middleware('auth:api');
 
 //list single mood, comments ecc..
 
-Route::get('media/{id}', 'MediaController@show')->middleware('auth:api');
+Route::get('media/{id}', 'MediaController@show');
 
 Route::get('user/{id}', 'UserController@show');
 
