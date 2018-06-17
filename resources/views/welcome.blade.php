@@ -24,13 +24,15 @@
     <link rel="stylesheet" href="{{ asset('Welcome/device-mockups/device-mockups.min.css')}}">
 
     <!-- Custom styles for this template -->
-    <link href="{{ asset('Welcome/css/new-age.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('Welcome/css/new-age.css')}}" rel="stylesheet">
+    <link href="{{ asset('Welcome/css/carusel.css')}}" rel="stylesheet">
 
 
     
     <script src="{{ asset('Welcome/code.jquery.com/jquery-1.11.1.min.js')}}"></script>
     <script src="{{ asset('Welcome/maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js')}}"></script>
     <link href="{{ asset('Welcome/maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css')}}" rel="stylesheet" id="bootstrap-css">
+    <script src="{{ asset('Welcome/js/fire.js')}}"></script>
 
 
   </head>
@@ -52,9 +54,7 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#download">Download</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
+            
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="{{ url('/login')}}">Admin</a>
             </li>
@@ -65,32 +65,9 @@
     </nav>
 
     <header class="masthead">
-      <div class="container h-100">
-        <div class="row h-100">
-          <div class="col-lg-7 my-auto">
-            <div class="header-content mx-auto">
-              <h2 class="mb-5">Timelife è un'applicazione </h2>
-                <h1 class="mb-5">Scaricala ora!</h1>
-              <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Download</a>
-            </div>
-          </div>
-          <div class="col-lg-5 my-auto">
-            <div class="device-container">
-              <div class="device-mockup iphone6_plus portrait white">
-                <div class="device">
-                  <div class="screen">
-                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                    <img src="/Users/gcristini/Documents/Interfaccia/PNG/Interfaccia.png" class="img-fluid" alt="">
-                  </div>
-                  <div class="button">
-                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <video playsinline autoplay muted id="bgvid" >
+          <source src="{{asset ('Welcome/img/particleee.mov')}}" type="video/webm">
+      </video>
     </header>
 
 
@@ -109,10 +86,9 @@
                 <div class="device">
                   <div class="screen">
                     <div class="mockup">
-                      <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                      <video width="350" height="510" controls autoplay id="video">
-                      <source src="/Users/gcristini/Downloads/video3.mp4" type="video/mp4">
-                    </video>
+                      
+                       <img class="login "src="{{URL::asset('Welcome/img/interfaccia.png')}}">
+                      
                     </div>
                   </div>
                   <div class="button">
@@ -128,7 +104,7 @@
                 <div class="col-lg-6">
                   <div class="feature-item">
                     <i class="icon-screen-smartphone text-primary"></i>
-                    <h3>iOs & Android</h3>
+                    <h3>iOs</h3>
                     <p class="text-muted">L'applicazione è disponibile per qualsiasi dipositivo mobile</p>
                   </div>
                 </div>
@@ -162,7 +138,20 @@
       </div>
     </section>
 
-    <section class="download bg-primary text-center" id="download">
+   
+
+    <section class="cta">
+      <div id="gradient">
+      <div class="cta-content">
+        <div class="container">
+          <h2>Colora i tuoi ricordi.<br></h2>
+          
+        </div>
+      </div>
+      </div>
+    </section>
+    
+     <section class="download bg-primary text-center" id="download">
       <div class="container">
         <div class="row">
           <div class="col-md-8 mx-auto">
@@ -178,19 +167,7 @@
       </div>
     </section>
 
-
-    <section class="cta">
-      <div class="cta-content">
-        <div class="container">
-          <h2>Registrati.<br>Inizia subito.</h2>
-          <!-- ????????????? -->
-          <a href="file:///Users/gcristini/Downloads/Registrazione/index.html" class="btn btn-outline btn-xl js-scroll-trigger">Registrati</a>
-        </div>
-      </div>
-      <div class="overlay"></div>
-    </section>
-
-    <section class="contact bg-primary" id="contact">
+    <!-- <section class="contact bg-primary" id="contact">
       <div class="container">
         <h2>Condividi il nostro progetto!</h2>
         <ul class="list-inline list-social">
@@ -211,7 +188,7 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section> -->
 
     <footer>
       <div class="container">
@@ -239,6 +216,9 @@
 
     <!-- Custom scripts for this template -->
     <script src="{{ asset('Welcome/js/new-age.min.js')}}"></script>
+    <script src="{{ asset('Welcome/js/text.js')}}"></script>
+    
+    
 
   </body>
 

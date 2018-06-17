@@ -8,6 +8,37 @@ body {
   font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
 }
 
+video#bgvid { 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: url(Welcome/img/firstFrame.jpg) no-repeat;
+
+}
+
+#gradient
+{
+  width: 100%;
+  height: 800px;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
+img.login{
+ 
+   height: 512px;
+
+}
+
+.fireworks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 /* General sizing */
 ul.dropdown-lr {
@@ -171,15 +202,15 @@ header.masthead {
   padding-top: 150px;
   padding-bottom: 100px;
   color: white;
-  background: url("../img/bg-pattern.png"), #7b4397;
-  background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #7b4397, #dc2430);
-  background: url("../img/bg-pattern.png"), linear-gradient(to left, #7b4397, #dc2430);
-}
+  background: url("Welcome/img/firstFrame.jpg");
+
+  }
 
 header.masthead .header-content {
   max-width: 500px;
   margin-bottom: 100px;
   text-align: center;
+  
 }
 
 header.masthead .header-content h1 {
@@ -217,7 +248,8 @@ header.masthead .device-container .screen img {
 
 section.download {
   position: relative;
-  padding: 150px 0;
+  padding-top: 0px;
+  padding-bottom: 100px;
 }
 
 section.download h2 {
@@ -299,22 +331,20 @@ section.features .feature-item i {
   -webkit-text-fill-color: transparent;
 }
 
-section.cta {
+/*section.cta {
   position: relative;
-  background-attachment: fixed;
+  
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   padding: 250px 0;
   background-image: url("../img/bg-cta.jpg");
-  background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+ 
+}*/
+div.full-width-div {
+    position: absolute;
+    width: 100%;
+    left: 0;
 }
 
 section.cta .cta-content {
@@ -324,16 +354,16 @@ section.cta .cta-content {
 
 section.cta .cta-content h2 {
   font-size: 50px;
-  max-width: 450px;
-  margin-top: 0;
-  margin-bottom: 25px;
+  text-align: center;
+  padding-top: 350px;
+  
   color: white;
 }
 
 @media (min-width: 768px) {
   section.cta .cta-content h2 {
     font-size: 80px;
-  }
+    margin-left: 0px;
 }
 
 section.cta .overlay {
@@ -422,9 +452,9 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 }
 
 .bg-primary {
-  background: #fdcc52;
-  background: -webkit-linear-gradient(#fdcc52, #fdc539);
-  background: linear-gradient(#fdcc52, #fdc539);
+  background: white;
+  background: -webkit-linear-gradient(white, white);
+  background: linear-gradient(white, white);
 }
 
 .text-primary {
