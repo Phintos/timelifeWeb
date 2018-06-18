@@ -20,7 +20,7 @@ class CalendarController extends Controller
 
     public function index($user_id)
     {
-        $calendar = Calendar::where('user_id', '=', $user_id)->get();
+        $calendar = Calendar::with('medias')->where('user_id', '=', $user_id)->get();
 
         return response()->json($calendar);
     }
