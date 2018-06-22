@@ -39,9 +39,9 @@ Route::get('allmedia/{calendar_id}', 'MediaController@index');
 
 //create new media...
 
-Route::post('media', 'MediaController@store')->middleware('auth:api');
+Route::post('media', 'MediaController@store');
 
-Route::post('user', 'UserController@store')->middleware('auth:api');
+Route::post('user', 'UserController@store');
 
 // update media...
 Route::put('media', 'MediaController@store')->middleware('auth:api');
@@ -60,7 +60,8 @@ Route::post('oauth/token', 'AccessTokenController@issueToken');
 
 // Registration Routes...
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register')->middleware('auth:api');
-Route::post('register', 'Auth\RegisterController@register')->middleware('auth:api');
+//Route::post('register', 'Auth\RegisterController@register')->middleware('auth:api');
+Route::post('register', 'Auth\RegisterController@create');
 
 // Password Reset Routes...
 Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->middleware('auth:api');
