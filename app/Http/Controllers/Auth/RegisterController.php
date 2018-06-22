@@ -69,7 +69,20 @@ class RegisterController extends Controller
     {
         $input = $request->all();
 
-        return User::create([
+        $validator = Validator::make($input, [
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'min:6|required_with:password_confirmation|same:password_confirmation',
+            // 'type' => 'required|string',
+            'gender' => 'required|string',
+            'location' => 'required|string',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['error' => $validator->errors()],400);
+        } 
+
+            return User::create([
             'name' => $input['name'],
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
@@ -77,6 +90,8 @@ class RegisterController extends Controller
             'type' => User::DEFAULT_TYPE,
             'gender' => $input['gender'],
             'location' => $input['location'],
-        ]);
+            ]);
+        }
+
+        
     }
-}
