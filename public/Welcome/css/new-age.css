@@ -16,6 +16,13 @@ video#bgvid {
 
 }
 
+.center {
+    display: block;
+    margin-left: auto;
+    margin-top: 50px;
+    margin-right: auto;
+    width: 20%;
+}
 #gradient
 {
   width: 100%;
@@ -96,7 +103,7 @@ p {
 }
 
 section {
-  padding: 100px 0;
+  padding-top: 100px;
 }
 
 section h2 {
@@ -139,7 +146,7 @@ section h2 {
 }
 
 #mainNav .navbar-nav > li > a.active {
-  color: #fdcc52 !important;
+  color: #17b898 !important;
   background-color: transparent;
 }
 
@@ -192,7 +199,7 @@ section h2 {
   }
   #mainNav.navbar-shrink .navbar-nav > li > a:hover,
   #mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
-    color: #fdcc52;
+    color: #17b898;
   }
 }
 
@@ -360,6 +367,14 @@ section.cta .cta-content h2 {
   color: white;
 }
 
+section.cta .cta-content h1 {
+  font-size: 40px;
+  text-align: center;
+  padding-top: 30px;
+  
+  color: white;
+}
+
 @media (min-width: 768px) {
   section.cta .cta-content h2 {
     font-size: 80px;
@@ -429,13 +444,14 @@ section.contact ul.list-social li.social-google-plus a:hover {
 footer {
   padding: 25px 0;
   text-align: center;
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #222222;
+  color: black;
+  background-color: white;
 }
 
 footer p {
   font-size: 12px;
   margin: 0;
+  color: black;
 }
 
 footer ul {
@@ -444,7 +460,7 @@ footer ul {
 
 footer ul li a {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.3);
+  color: black;
 }
 
 footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li a.active {

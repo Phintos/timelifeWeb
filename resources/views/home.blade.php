@@ -198,7 +198,7 @@
           <div class="col-md-6">
             <div class="card  card-tasks">
               <div class="card-header ">
-                <h5 class="card-category">Backend development</h5>
+                <h5 class="card-category">2018 Country</h5>
                 <h4 class="card-title">Country Chart</h4>
               </div>
               <div class="card-body ">
@@ -222,12 +222,12 @@
           <div class="col-md-6">
             <div class="card">
               <div class="card-header">
-                <h5 class="card-category">All Persons List</h5>
-                <h4 class="card-title"> Employees Stats</h4>
+                <h5 class="card-category">2018 Users</h5>
+                <h4 class="card-title"> New Users</h4>
               </div>
               <div class="card-body">
-                <div class="table-responsive">
-                  <table class="table">
+                <div class="table-wrapper-2">
+                  <table class="table table-responsive-md">
 
                     <thead class=" text-primary">
                       <th>
@@ -244,9 +244,8 @@
                       </th>
                     </thead>
                     <tbody>
-                    @foreach($users as $user)
+                    @foreach($users->take(9) as $user)
                         <tr>
-                          
                           <td>{{ $user->name }}</td>
                           <td>{{ $user->location }}</td>
                           <td>{{ $user->email }}</td>

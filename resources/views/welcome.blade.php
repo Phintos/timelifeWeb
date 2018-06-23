@@ -75,7 +75,7 @@
     <section class="features" id="features">
       <div class="container">
         <div class="section-heading text-center">
-          <h2>Archivio illimitato, Ricordi illimitati</h2>
+          <h2>Archivio illimitato, ricordi illimitati</h2>
           <p class="text-muted">Scopri alcune curiosità di questa applicazione</p>
           <hr>
         </div>
@@ -92,7 +92,7 @@
                     </div>
                   </div>
                   <div class="button">
-                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                    
                   </div>
                 </div>
               </div>
@@ -105,7 +105,7 @@
                   <div class="feature-item">
                     <i class="icon-screen-smartphone text-primary"></i>
                     <h3>iOs</h3>
-                    <p class="text-muted">L'applicazione è disponibile per qualsiasi dipositivo mobile</p>
+                    <p class="text-muted">L'applicazione è disponibile per tutti i dispositivi mobile IOS</p>
                   </div>
                 </div>
                 <div class="col-lg-6">
@@ -140,55 +140,18 @@
 
    
 
-    <section class="cta">
+    <section class="cta" id="download">
       <div id="gradient">
       <div class="cta-content">
         <div class="container">
-          <h2>Colora i tuoi ricordi.<br></h2>
-          
+          <h2>Colora i tuoi ricordi</h2>
+          <a class="appstore" id="appstore" href="https://itunes.apple.com/it/app/mcdonalds/id1217507712?mt=8&v0=WWW-EUIT-ITSTOP100-FREEAPPS&l=it&ign-mpt=uo%3D4"><img class="center" src="{{ asset('Welcome/img/applee.png')}}" alt=""></a>
         </div>
       </div>
       </div>
     </section>
     
-     <section class="download bg-primary text-center" id="download">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 mx-auto">
-            <h2 class="section-heading">Scopri di cosa si tratta!</h2>
-            <p>La nostra applicazione è disponibile su qualsiasi dispositivo mobile!</p>
-            <p>Scaricala ora per iniziare</p>
-            <div class="badges">
-              <a class="badge-link" href="#"><img src="{{ asset('Welcome/img/google-play-badge.svg')}}" alt=""></a>
-              <a class="badge-link" href="#"><img src="{{ asset('Welcome/img/app-store-badge.svg')}}" alt=""></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- <section class="contact bg-primary" id="contact">
-      <div class="container">
-        <h2>Condividi il nostro progetto!</h2>
-        <ul class="list-inline list-social">
-          <li class="list-inline-item social-twitter">
-            <a href="#">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-          <li class="list-inline-item social-facebook">
-            <a href="#">
-              <i class="fa fa-facebook"></i>
-            </a>
-          </li>
-          <li class="list-inline-item social-google-plus">
-            <a href="#">
-              <i class="fa fa-google-plus"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section> -->
+     
 
     <footer>
       <div class="container">
