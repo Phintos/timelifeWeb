@@ -25,4 +25,27 @@ class CalendarController extends Controller
         return response()->json($calendar);
     }
 
+    public function store($user_id, Request $request)
+    {
+        $calendar = $request->isMethod('put') ? Calendar::findOrFail($request->calendar_id) : new Calendar;
+        // $calendar = new Calendar();
+
+        $calendar->mood = $request->input('mood');
+        $calendar->user_id = $user_id;
+        $calendar->calendar_date = $request->input('calendar_date');
+
+        $calendar->save();
+
+        return response()->json($calendar);
+
+        
+        // $usr = User::findOrFail($calendar->user_id);
+        // $usr->mood = $usr->mood . $request->input('mood');
+        // $usr->save();
+
+        // if($media->save()) {
+        //     return new MediaResource($media);
+        // }
+    }
+
 }

@@ -52,6 +52,7 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::find($id);
+        
         return $user;
     }
 
@@ -94,15 +95,6 @@ class UserController extends Controller
         $user = User::all();
         $user = $user->toArray();
                
-
         return View::make('home', $user);
     }
-
-    // public function displayData(Request $request)
-    // {
-        
-
-    // }
-
-
 }

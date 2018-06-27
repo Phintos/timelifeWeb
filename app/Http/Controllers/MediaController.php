@@ -17,9 +17,6 @@ class MediaController extends Controller
     public function index($calendar_id)
     {
         $media = Media::all();
-
-        //return MediaResource::collection($media);
-
         $media = Media::where('calendar_id', '=', $calendar_id)->get();
 
         return response()->json($media);
@@ -45,7 +42,6 @@ class MediaController extends Controller
     {
         $media = $request->isMethod('put') ? Media::findOrFail($request->media_id) : new Media;
 
-        //$media->id = $request->input('media_id');
         $media->calendar_id = $request->input('calendar_id');
         $media->mood = $request->input('mood');
         $media->title = $request->input('title');
@@ -70,10 +66,8 @@ class MediaController extends Controller
      */
     public function show($id)
     {
-        //Get media
         $media = Media::findOrFail($id);
 
-        //Return single media as resource
         return new MediaResource($media);
     }
 
@@ -108,7 +102,6 @@ class MediaController extends Controller
      */
     public function destroy($id)
     {
-         //Get media
         $media = Media::findOrFail($id);
 
         if($media->delete()) {

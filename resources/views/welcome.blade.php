@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="icon" type="image/png" href="{{ asset('Welcome/img/Logo3.png')}}"/>
+    <title>Timelife</title>
 
-    <title>Timelife's App</title>
-
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap -->
     <link href="{{ asset('Welcome/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
-    <!-- Custom fonts for this template -->
+    <!-- Fonts -->
     <link rel="stylesheet" href="{{ asset('Welcome/vendor/font-awesome/css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{ asset('Welcome/vendor/simple-line-icons/css/simple-line-icons.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -23,18 +23,15 @@
     <!-- Plugin CSS -->
     <link rel="stylesheet" href="{{ asset('Welcome/device-mockups/device-mockups.min.css')}}">
 
-    <!-- Custom styles for this template -->
+    <!-- Styles -->
     <link href="{{ asset('Welcome/css/new-age.css')}}" rel="stylesheet">
     <link href="{{ asset('Welcome/css/carusel.css')}}" rel="stylesheet">
 
-
-    
+    <!-- Scripts -->
     <script src="{{ asset('Welcome/code.jquery.com/jquery-1.11.1.min.js')}}"></script>
     <script src="{{ asset('Welcome/maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js')}}"></script>
     <link href="{{ asset('Welcome/maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css')}}" rel="stylesheet" id="bootstrap-css">
     <script src="{{ asset('Welcome/js/fire.js')}}"></script>
-
-
   </head>
 
   <body id="page-top">
@@ -54,16 +51,16 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#download">Download</a>
             </li>
-            
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="{{ url('/login')}}">Admin</a>
             </li>
-            
           </ul>
         </div>
       </div>
     </nav>
 
+    
+    <!-- Video -->
     <header class="masthead">
       <video playsinline autoplay muted id="bgvid" >
           <source src="{{asset ('Welcome/img/particleee.mov')}}" type="video/webm">
@@ -71,7 +68,7 @@
     </header>
 
 
-
+    <!-- Features -->
     <section class="features" id="features">
       <div class="container">
         <div class="section-heading text-center">
@@ -86,9 +83,7 @@
                 <div class="device">
                   <div class="screen">
                     <div class="mockup">
-                      
-                       <img class="login "src="{{URL::asset('Welcome/img/interfaccia.png')}}">
-                      
+                      <img class="login "src="{{URL::asset('Welcome/img/interfaccia.png')}}">
                     </div>
                   </div>
                   <div class="button">
@@ -104,14 +99,14 @@
                 <div class="col-lg-6">
                   <div class="feature-item">
                     <i class="icon-screen-smartphone text-primary"></i>
-                    <h3>iOs</h3>
-                    <p class="text-muted">L'applicazione è disponibile per tutti i dispositivi mobile IOS</p>
+                      <h3>iOs</h3>
+                      <p class="text-muted">L'applicazione è disponibile per tutti i dispositivi mobile IOS</p>
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="feature-item">
                     <i class="icon-camera text-primary"></i>
-                    <h3>Istantanee</h3>
+                      <h3>Istantanee</h3>
                     <p class="text-muted">Scatta un'istantanea dei tuoi momenti e portala sempre con te</p>
                   </div>
                 </div>
@@ -120,15 +115,15 @@
                 <div class="col-lg-6">
                   <div class="feature-item">
                     <i class="icon-present text-primary"></i>
-                    <h3>Gratuita</h3>
+                      <h3>Gratuita</h3>
                     <p class="text-muted">Questa è un'applicazione completamente gratuita</p>
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="feature-item">
                     <i class="icon-lock-open text-primary"></i>
-                    <h3>Privacy</h3>
-                    <p class="text-muted">Nessuno potrà visualizzare i tuoi contenuti se non sarai tu a volerlo</p>
+                      <h3>Privacy</h3>
+                      <p class="text-muted">Nessuno potrà visualizzare i tuoi contenuti se non sarai tu a volerlo</p>
                   </div>
                 </div>
               </div>
@@ -137,22 +132,20 @@
         </div>
       </div>
     </section>
-
-   
-
+    
+    <!-- Download -->
     <section class="cta" id="download">
       <div id="gradient">
-      <div class="cta-content">
-        <div class="container">
-          <h2>Colora i tuoi ricordi</h2>
-          <a class="appstore" id="appstore" href="https://itunes.apple.com/it/app/mcdonalds/id1217507712?mt=8&v0=WWW-EUIT-ITSTOP100-FREEAPPS&l=it&ign-mpt=uo%3D4"><img class="center" src="{{ asset('Welcome/img/applee.png')}}" alt=""></a>
+        <div class="cta-content">
+          <div class="container" id="kes">
+            <h2>Colora i tuoi ricordi</h2>
+            <a href="https://itunes.apple.com/it/app/mcdonalds/id1217507712?mt=8&v0=WWW-EUIT-ITSTOP100-FREEAPPS&l=it&ign-mpt=uo%3D4"><img class="center" src="{{ asset('Welcome/img/applee.png')}}" alt=""></a>
+          </div>
         </div>
-      </div>
       </div>
     </section>
     
-     
-
+    <!-- Footer -->
     <footer>
       <div class="container">
         <p>&copy; Timelife Website 2018. All Rights Reserved.</p>
@@ -170,6 +163,7 @@
       </div>
     </footer>
 
+    
     <!-- Bootstrap core JavaScript -->
     <script src="{{ asset('Welcome/vendor/jquery/jquery.min.js')}}"></script>
     <script src="{{ asset('Welcome/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
@@ -177,12 +171,9 @@
     <!-- Plugin JavaScript -->
     <script src="{{ asset('Welcome/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
 
-    <!-- Custom scripts for this template -->
+    <!-- Custom scripts -->
     <script src="{{ asset('Welcome/js/new-age.min.js')}}"></script>
     <script src="{{ asset('Welcome/js/text.js')}}"></script>
-    
-    
-
+  
   </body>
-
 </html>

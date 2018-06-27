@@ -3,7 +3,6 @@
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
 
-
 class MediaTableSeeder extends Seeder
 {
     /**
@@ -14,7 +13,5 @@ class MediaTableSeeder extends Seeder
     public function run()
     {
     	factory(App\Media::class, 100)->create();
-  
-  
     }
 }

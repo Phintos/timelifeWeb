@@ -26,13 +26,4 @@ class Media extends Model
         return $this->belongsTo('App\Calendar');
     }
 
-    // public function moods()
-    // {
-    //     return $this->belongsTo('App\Mood');
-    // }
-
-    // public function comments()
-    // {
-    //     return $this->hasOne('App\Comment');
-    // }
 }

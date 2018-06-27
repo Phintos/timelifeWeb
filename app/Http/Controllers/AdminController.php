@@ -15,14 +15,9 @@ class AdminController extends Controller
         $this->middleware('auth');
     }
 
-    
-    
-
     public function admin()
     {
-        
         //Country Chart
-        //Richiamiamo l'user e li cicliamo, se la location non esiste avremo come valore uno. Se già esiste addizioniamo all'uno.
         $users = User::orderBy('id', 'desc')->get();
         
         $arrayLocation = array();
@@ -62,21 +57,20 @@ class AdminController extends Controller
             $reasons->addRow(array($key, $value));
         }
         
-
-            Lava::PieChart('IMDB', $reasons, [
+        Lava::PieChart('IMDB', $reasons, [
                 'is3D'   => true,
                 'slices' => [
                     ['offset' => 0.2],
                     ['offset' => 0.25],
                     ['offset' => 0.3]
                 ]
-            ]);
+        ]);
 
 
+        
         // Mood Chart
         $medias = Media::all();
         $arrayMood = array();
-
 
         foreach ($medias as $media) {
             if (!array_key_exists($media->mood, $arrayMood)) {
@@ -85,20 +79,19 @@ class AdminController extends Controller
                 $arrayMood[$media->mood]++;
             }
         }
+        
         $reasons = Lava::DataTable();
-
-            $reasons->addStringColumn('Reasons')->addNumberColumn('Percent');
+        $reasons->addStringColumn('Reasons')->addNumberColumn('Percent');
             
-            foreach ($arrayMood as $key => $value) {
+        foreach ($arrayMood as $key => $value) {
             $reasons->addRow(array($key, $value));
-            }   
+        }   
 
-            Lava::DonutChart('IMDB', $reasons, [
-                'title' => 'Mood Chart'
-            ]);
+        Lava::DonutChart('IMDB', $reasons, [
+            'title' => 'Mood Chart'
+        ]);
   
 
         return view('home', compact('users'));
     }
-
 }
