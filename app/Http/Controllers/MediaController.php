@@ -42,12 +42,22 @@ class MediaController extends Controller
     {
         $media = $request->isMethod('put') ? Media::findOrFail($request->media_id) : new Media;
 
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $name = str_slug($request->calendar_id).'-'.str_slug($request->title).'.'.$image->getClientOriginalExtension();
+            $destinationPath = public_path('/uploads');
+            $imagePath = $destinationPath. "/".  $name;
+            $image->move($destinationPath, $name);
+            $media->mediaUrl = 'http://timelifeweb.test/uploads/' . $name;
+        }
+
         $media->calendar_id = $request->input('calendar_id');
         $media->mood = $request->input('mood');
         $media->title = $request->input('title');
         $media->body = $request->input('body');
         $media->type = $request->input('type');
-        $media->mediaUrl = $request->input('mediaUrl');
+        // $media->mediaUrl = $request->input('mediaUrl');
+        // $media->mediaUrl = $image_path;
 
         $cal = Calendar::findOrFail($media->calendar_id);
         $cal->mood = $cal->mood . $request->input('mood');

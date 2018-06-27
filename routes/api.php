@@ -25,6 +25,7 @@ Route::post('user', 'UserController@store');
 // update media...
 Route::put('media', 'MediaController@store')->middleware('auth:api');
 Route::put('user', 'UserController@store')->middleware('auth:api');
+Route::put('calendar/{user_id}', 'CalendarController@store');
 
 //destroy media
 Route::delete('media/{id}', 'MediaController@destroy')->middleware('auth:api');
