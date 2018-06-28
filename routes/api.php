@@ -19,7 +19,13 @@ Route::get('calendar/{user_id}', 'CalendarController@index');
 Route::get('allmedia/{calendar_id}', 'MediaController@index');
 
 //create new media
+<<<<<<< HEAD
 Route::post('media/{calendar_id}', 'MediaController@store');
+=======
+Route::post('media', 'MediaController@store');
+Route::post('media/{calendar_id}', 'MediaController@store');
+
+>>>>>>> 83741468fde93111ea95edf268a6e378ae371d82
 Route::post('user', 'UserController@store');
 
 // update media...

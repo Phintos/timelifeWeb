@@ -3,7 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-
+// modo diverso di utilizzare un modello
 class Media extends JsonResource
 {
     /**
@@ -14,6 +14,7 @@ class Media extends JsonResource
      */
     public function toArray($request)
     {
+        //array in formato jsomn
         return parent::toArray($request);
     }
 }

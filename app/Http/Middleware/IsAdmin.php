@@ -12,11 +12,14 @@ class IsAdmin
      * @param  \Closure  $next
      * @return mixed
      */
+    
     public function handle($request, Closure $next)
     {
+        //se è admin vai alla request???
         if(auth()->user()->isAdmin()) {
             return $next($request);
         } 
+        //se no pop-up
         return redirect('/iuWwJCX7AG');
     }
 }

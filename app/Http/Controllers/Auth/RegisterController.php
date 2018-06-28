@@ -69,6 +69,7 @@ class RegisterController extends Controller
     {
         $input = $request->all();
 
+        //creamo un validator per la registrazione che controla se abbiamo inserito tutti i campi
         $validator = Validator::make($input, [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
@@ -78,10 +79,11 @@ class RegisterController extends Controller
             'location' => 'required|string',
         ]);
 
+        //se non abbiamo compilato tutti i campi ritorna uno stato di errore
         if ($validator->fails()) {
             return response()->json(['error' => $validator->errors()],400);
         } 
-
+            //altrimenti crea un nuovo user con questi campi
             return User::create([
             'name' => $input['name'],
             'email' => $input['email'],
