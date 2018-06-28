@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Media;
 use App\Calendar;
+//cosè media resources ???
 use App\Http\Resources\Media as MediaResource;
 
 class MediaController extends Controller
@@ -14,6 +15,8 @@ class MediaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
+    //perchè calendar_id
     public function index($calendar_id)
     {
         $media = Media::all();
@@ -40,17 +43,26 @@ class MediaController extends Controller
      */
     public function store(Request $request)
     {
+        //???
         $media = $request->isMethod('put') ? Media::findOrFail($request->media_id) : new Media;
 
+        //se la richiesta ha il file immagine
         if ($request->hasFile('image')) {
             $image = $request->file('image');
+            
+            //il nome dell'immagine sarà una combinazione del calendar_id, del title del media e dell'estensione del file(jpg,png)
             $name = str_slug($request->calendar_id).'-'.str_slug($request->title).'.'.$image->getClientOriginalExtension();
+           
+            //salva l'immagine nella cartella uploads
             $destinationPath = public_path('/uploads');
             $imagePath = $destinationPath. "/".  $name;
             $image->move($destinationPath, $name);
+            
+            //il mediaUrl è quello che viene salvato nel database, ossia l'url dell'immagine
             $media->mediaUrl = 'http://timelifeweb.test/uploads/' . $name;
         }
 
+        //qui vengono definiti i campi da creare ???
         $media->calendar_id = $request->input('calendar_id');
         $media->mood = $request->input('mood');
         $media->title = $request->input('title');
@@ -59,6 +71,7 @@ class MediaController extends Controller
         // $media->mediaUrl = $request->input('mediaUrl');
         // $media->mediaUrl = $image_path;
 
+        //???
         $cal = Calendar::findOrFail($media->calendar_id);
         $cal->mood = $cal->mood . $request->input('mood');
         $cal->save();

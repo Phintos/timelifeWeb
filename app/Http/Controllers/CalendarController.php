@@ -22,11 +22,13 @@ class CalendarController extends Controller
     {
         $calendar = Calendar::with('medias')->where('user_id', '=', $user_id)->get();
 
+        //???
         return response()->json($calendar);
     }
 
     public function store($user_id, Request $request)
     {
+        //creamo un nuovo calendario corrispondente al giorno
         $calendar = $request->isMethod('put') ? Calendar::findOrFail($request->input('calendar_id')) : new Calendar;
       
 

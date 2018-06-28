@@ -11,6 +11,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Response;
 use \Laravel\Passport\Http\Controllers\AccessTokenController as ATC;
 
+//???
 class AccessTokenController extends ATC
 {
      public function issueToken(ServerRequestInterface $request)

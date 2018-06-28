@@ -18,8 +18,10 @@ class AdminController extends Controller
     public function admin()
     {
         //Country Chart
+        //Ordiniamo gli users per id decrescenti
         $users = User::orderBy('id', 'desc')->get();
         
+        //facciamo ciclare un array, se location non esiste avremo il counter si uno, se esiste aggiungeremo ad uno(++).
         $arrayLocation = array();
         foreach ($users as $user) {
             if (!array_key_exists($user->location, $arrayLocation)) {
@@ -32,6 +34,7 @@ class AdminController extends Controller
         $popularity = Lava::DataTable();
         $popularity->addStringColumn('Country')->addNumberColumn('Popularity');
 
+        //???
         foreach ($arrayLocation as $key => $value) {
             $popularity->addRow(array($key, $value));
         }
@@ -91,7 +94,7 @@ class AdminController extends Controller
             'title' => 'Mood Chart'
         ]);
   
-
+        //compact???
         return view('home', compact('users'));
     }
 }

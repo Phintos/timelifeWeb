@@ -17,6 +17,7 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next, $guard = null)
     {
+        //indica dove fare il redirect se sei admin
         if (Auth::guard($guard)->check() && Auth::user()->isAdmin()) {
             return redirect('/home');
         } 
