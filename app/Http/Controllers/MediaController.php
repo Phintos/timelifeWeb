@@ -15,7 +15,7 @@ class MediaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    
+
     //perchè calendar_id
     public function index($calendar_id)
     {
@@ -49,29 +49,28 @@ class MediaController extends Controller
         //se la richiesta ha il file immagine
         if ($request->hasFile('image')) {
             $image = $request->file('image');
-            
+
             //il nome dell'immagine sarà una combinazione del calendar_id, del title del media e dell'estensione del file(jpg,png)
             $name = str_slug($request->calendar_id).'-'.str_slug($request->title).'.'.$image->getClientOriginalExtension();
-           
+
             //salva l'immagine nella cartella uploads
             $destinationPath = public_path('/uploads');
             $imagePath = $destinationPath. "/".  $name;
             $image->move($destinationPath, $name);
-            
+
             //il mediaUrl è quello che viene salvato nel database, ossia l'url dell'immagine
             $media->mediaUrl = 'http://timelifeweb.test/uploads/' . $name;
         }
 
-<<<<<<< HEAD
-        $media->calendar_id = $calendar_id;
-=======
+
+
         //qui vengono definiti i campi da creare ???
-        $media->calendar_id = $request->input('calendar_id');
->>>>>>> 83741468fde93111ea95edf268a6e378ae371d82
+        //$media->calendar_id = $request->input('calendar_id');
         $media->mood = $request->input('mood');
         $media->title = $request->input('title');
         $media->body = $request->input('body');
         $media->type = $request->input('type');
+        $media->calendar_id = $calendar_id;
         $media->mediaUrl = $request->input('mediaUrl');
         //$media->mediaUrl = $image_path;
 
